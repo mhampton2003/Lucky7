@@ -18,6 +18,9 @@ int main() {
 
 	//f1();
 	//f2();
+	//f3();
+	//f4();
+	f5();
 
 	return 0;
 }
@@ -56,12 +59,37 @@ void f2()
 	cout << "sum = " << sum << endl;
 }
 
+//calculates and prints the first 10 terms of the factorial. 
 void f3()
 {
+	int fact = 1;
+
+	for (int i = 2; i <= 11; i++) {
+		cout << fact << " ";
+		fact = fact * i;
+	}
+
+	cout << endl;
+		
 }
 
+//reads in a string and determines whether it is a palindrome.
 void f4()
 {
+	string test = "tacocat";
+	int lastIndex = test.length() - 1;
+	int firstIndex = 0;
+
+	bool ok = true;
+	while (ok && firstIndex < test.length()) {
+		if (test[firstIndex++] != test[lastIndex--])
+			ok = false;
+	}
+
+	if (ok)
+		cout << test << " is a palindrome\n";
+	else
+		cout << test << " is not a palindrome\n";
 }
 
 void f5()
