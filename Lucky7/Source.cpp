@@ -92,8 +92,25 @@ void f4()
 		cout << test << " is not a palindrome\n";
 }
 
+//reads in a positive integer and determines whether or not it is a prime number.
 void f5()
 {
+	int num;
+	cout << "Enter a positive integer: ";
+	cin >> num;
+	bool ok = true;
+
+	for (int i = 2; i <= sqrt(num) && ok; i++) {
+		if (num % i == 0) {
+			ok = false;
+		}
+	}
+	if (ok) {
+		cout << num << " is prime";
+	}
+	else {
+		cout << num << " is not prime";
+	}
 }
 
 void f6()
